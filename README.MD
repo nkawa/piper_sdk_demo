@@ -26,11 +26,16 @@ can模块激活说明[can README](./can_config.MD)
 
 ```shell
 .
-├── piper_disable.py        # 失能机械臂
-├── piper_enable.py         # 使能机械臂
+├── piper_disable.py        # 机械臂失能
+├── piper_enable.py         # 机械臂使能
 ├── piper_joint_ctrl.py     # 机械臂关节控制
-├── piper_master_config.py  # 将机械臂设置为主动臂
-├── piper_slave_config.py   # 将机械臂设置为从动臂
+├── piper_master_config.py  # 机械臂设置为主臂
+├── piper_read_arm_motor_max_acc_limit.py   # 读取所有电机的最大加速度限制
+├── piper_read_arm_motor_max_angle_spd.py   # 读取机械臂的所有电机的最大加速度限制
+├── piper_reset.py          # 机械臂重置，需要在设定为示教模式后执行一次
+├── piper_set_mit.py        # 设定机械臂为mit模式，这个模式下机械臂响应最快速
+├── piper_slave_config.py   # 机械臂设置为从臂
+├── piper_status.py         # 机械臂状态读取
 └── read_joint_state.py     # 读取关节角消息并打印
 ```
 
