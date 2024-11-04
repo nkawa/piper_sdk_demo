@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*-coding:utf8-*-
 # 注意demo无法直接运行，需要pip安装sdk后才能运行
-# 设置机械臂为mit控制模式，这个模式下，机械臂相应最快
+# 设置机械臂重置，需要在mit或者示教模式切换为位置速度控制模式时执行
 
 from typing import (
     Optional,
@@ -13,5 +13,5 @@ from piper_sdk import *
 if __name__ == "__main__":
     piper = C_PiperInterface()
     piper.ConnectPort()
-    piper.MotionCtrl_1(0x02,0,0)
-    piper.MotionCtrl_2(0, 0, 0, 0xAD)# 0xFC
+    piper.MotionCtrl_1(0x02,0,0)#恢复
+    piper.MotionCtrl_2(0, 0, 0, 0x00)#位置速度模式
